@@ -82,7 +82,7 @@ def recommend_movies(movie_name, top_n=6):
     sorted_similarities = sorted(similarity_score, key=lambda x: x[1], reverse=True)
 
     recommended_movies = [
-        movies.iloc[movie[0]]['title'] for movie in sorted_similarities[0:top_n+1]
+        movies.iloc[movie[0]]['title'] for movie in sorted_similarities[0:top_n]
     ]
 
     return recommended_movies
